@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name=“viewport” content=“width=device-width, viewport-fit=cover”>	
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/swiper-4.3.3.min.css"/>
+		<title>首页</title>
+	</head>
+	<body>
+		<div class="my_index">
+			<div class="my_top">
+				<div class="top_logo">
+					<img src="./imgs/logoimg.png" alt="">
+				</div>
+				<div class="top_mune">
+					<ul>
+						<li>
+							<a href="web_index.html" class="active">首页</a>
+						</li>
+						<li>
+							<a href="web/web_about_us.html">关于我们</a>
+						</li>
+						<li>
+							<a href="web/web_company_product.html">公司产品</a>
+						</li>
+						<li>
+							<a href="web/web_contact_us.html">联系我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="banner_img">
+				<div class="swiper-container " >
+					<div class="swiper-wrapper"></div>
+					<!-- 如果需要分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="product_presentation">
+				<img src="./img/img1.png" alt="">
+			</div>
+			<div class="product_list">
+				<div class="product_li">
+					<ul>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="company_introduction">
+				<div class="diva">
+					<div class='company_name'>
+						公司介绍
+					</div>
+					<div class="introduction">
+						<p>湖南朗盾科技有限公司是一家专业从事医疗卫生、医疗器械、健康防护用品的高科技生产型企业，
+						立志打造成国内一流的医疗及个人防护全方位产品链的综合生产及服务提供商。
+						</p>					
+					</div>
+				</div>
+			</div>
+			<div class="company_mien content_us">
+				<div class='about_us_title'>
+					<img src="./img/mien_img.png" alt="">
+				</div>
+				<div class="mien_img">
+					<img src="./img/about_usb.png" alt="">
+				</div>
+			</div>
+			<div class="html_bottom">
+				<div class="htmla">
+					<ul>
+						<li>
+							<img src="./img/img7.png" alt="">
+							<span>7x24小时</span>
+						</li>
+						<li>
+							<img src="./img/img6.png" alt="">
+							<span>专业化团队</span>
+						</li>
+						<li>
+							<img src="./img/img3.png" alt="">
+							<span>企业级SaaS</span>
+						</li>
+					</ul>
+				</div>
+				<div class="line"></div>
+				<div class="htmlb">
+					<div class="bottom_logo">
+						<img src="./imgs/logoimg1.png" >
+					</div>
+					<div class="small_title">
+						<span>关于我们</span>
+						<span>服务协议</span>
+						<span>隐私政策</span>
+						<span>意见反馈</span>						
+					</div>
+				</div>
+				<div class="htmlc">
+					<div class="ewm">
+						<img src="./img/ewm.png" alt="">
+					</div>
+					<div class="small_titlea">
+						<div class="titleone">反馈建议：123456789@163.com</div>
+						<div class="titleone">咨询热线：123456789</div>
+						<div class="titleone">联系地址：湖南省永州市双牌县</div>
+					</div>
+				</div>
+				<div class="htmld">
+					<div>Copyright © 2016-2019包图网信息科技有限公司 | 粤ICP备16096177号 深圳市市场监督管理局企业主体身份公示</div>
+				</div>
+			</div>
+		</div>
+	<script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="./js/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function banner(){
+			var imgs=[
+				{img:"./imgs/banner.png"},
+				{img:"./imgs/banner1.png"},
+				{img:"./imgs/banner2.png"}
+			];
+			for(var imga of imgs){
+				var imgb=imga.img;
+				var li;
+				li="<div class='swiper-slide'>"+						
+						"<img src='"+imgb+"'>"+          						
+				   "</div>";
+				   $(".swiper-wrapper").append(li);
+			}
+		};
+		
+		banner();
+		$(document).ready(function () {
+			var mySwiper = new Swiper ('.swiper-container', {
+			        loop: true,
+			        slidesPerView: "auto",
+			        speed: 3000,
+			        autoplay: {
+			            disableOnInteraction: false, //手动滑动之后不打断播放
+			            delay: 3000
+			        },
+			        observer: true, //监听，当改变swiper的样式（例如隐藏/显示）或者修改swiper的子元素时，自动初始化swiper。
+			        pagination: {
+			            el: ".swiper-pagination"
+			        }		
+			      })
+			});
+		
+			  function productimg(){
+			  					 var productimg=[
+			  					 	{img:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583129936054&di=d91455294609fc698f7c7dac74e887af&imgtype=0&src=http%3A%2F%2Fwww.webshu.net%2Fd%2Ffile%2Fcontent%2F202001%2F16%2F5e1fd70b974f5.png",title:"N95"},
+			  						{img:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=819953589,2378956144&fm=11&gp=0.jpg",title:"医用一次性"},
+			  						{img:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3688767518,2422578727&fm=26&gp=0.jpg',title:"3M"}			   						
+			  					 ]
+			  					 for(var imga of productimg){
+			  						 var imgab=imga.img;
+			  						 var title=imga.title;
+			  						 var lis;
+			  						 lid="<li>"+
+			  							"<img src='"+imgab+"'>"+
+			  							"<div>"+title+"</div>"+
+			  						 "</li>";
+			  						 $(".product_li ul").append(lid);
+									 $(".product_li ul li").click(function(){
+										 window.location.href="web/web_company_product.html";
+									 })
+			  					 }
+			  }
+			  productimg();
+	</script>
+	</body>
+</html>
